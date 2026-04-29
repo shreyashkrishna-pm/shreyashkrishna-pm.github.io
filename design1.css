@@ -1,5 +1,54 @@
 /* ================= BASE ================= */
 
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(253, 233, 220, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 16px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+  font-weight: 600; /* name is bold */
+  font-size: 16px;
+}
+
+/* LINKS */
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #6e5a50;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2a1f1a;
+}
+
+html {
+  scroll-behavior: smooth; /* for smooth scrolling when clicking nav links */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* keep it simple for now */
+  }
+}
+/* Here we are done with the nav bar */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   margin: 0;
