@@ -21,10 +21,33 @@
 /* LOGO */
 
 .logo {
+  display: flex;
+  align-items: center;
   font-weight: 600; /* name is bold */
   font-size: 16px;
+  gap: 10px;
 }
 
+/* small profile image in nav */
+.logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* name text */
+.logo span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #2a1f1a;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
 /* LINKS */
 
 .nav-links a {
@@ -44,8 +67,32 @@ html {
 }
 
 @media (max-width: 768px) {
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .nav-links {
-    display: none; /* keep it simple for now */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+    .navbar {
+    position: static;
+  }
+  .logo span {
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
   }
 }
 /* Here we are done with the nav bar */
@@ -70,10 +117,16 @@ section {
 
 /* ================= HERO ================= */
 
+/* ================= HERO ================= */
+
 .hero {
   padding: 100px 20px;
-  background: linear-gradient(180deg, #fde9dc 0%, #f8d7c4 100%);
+  background: #fff8f3; /* unified background */
   text-align: center;
+
+  /* subtle separation + depth */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: inset 0 -20px 40px rgba(0,0,0,0.02);
 }
 
 .hero-container {
@@ -153,29 +206,74 @@ section h2 {
 
 /* ================= PROJECTS ================= */
 
+
 .project {
-  background: #fff8f3;
-  border: 1px solid #f1e3da;
-  padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  transition: all 0.2s ease;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  background: #fffdfb;
+  border: 1px solid #f1e7df;
+
+  padding: 28px;
+  border-radius: 14px;
+
+  margin-bottom: 24px;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
 }
+
+/* subtle hover */
 
 .project:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
+
+/* project title */
 
 .project h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 16px;
+
+  color: #2a1f1a;
+
+  letter-spacing: -0.4px;
 }
 
+/* paragraph spacing */
+
 .project p {
-  margin: 6px 0;
-  color: #7a6d65;
+  margin: 12px 0;
+
+  color: #6e5a50;
+
+  line-height: 1.7;
+}
+
+/* metrics line */
+
+.project strong {
+  color: #2a1f1a;
+}
+
+/* case study links */
+
+.project a {
+  display: inline-block;
+
+  margin-top: 16px;
+
+  text-decoration: none;
+
+  color: #2a1f1a;
+
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.project a:hover {
+  opacity: 0.7;
 }
 
 /* ================= HOW I BUILD (NEW CARD) ================= */
@@ -234,4 +332,356 @@ section h2 {
   .stack div {
     margin-bottom: 15px;
   }
+}
+/* ================= CASE STUDY PAGE ================= */
+
+.case-study-page {
+  background: #fffaf6;
+}
+
+/* hero */
+
+.case-study-page .hero {
+  text-align: left;
+}
+
+/* readability */
+
+.case-study-page section p {
+  max-width: 760px;
+
+  line-height: 1.9;
+
+  color: #5f534c;
+}
+
+/* section headings */
+
+.case-study-page section h2 {
+  margin-bottom: 24px;
+
+  color: #2a1f1a;
+}
+
+/* bullet lists */
+
+.case-study-page section ul {
+  max-width: 760px;
+
+  padding-left: 22px;
+
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+
+.case-study-page section li {
+  margin-bottom: 12px;
+
+  color: #5f534c;
+
+  line-height: 1.8;
+}
+
+/* narrower reading width */
+
+.case-study-page .hero-text {
+  max-width: 760px;
+}
+
+/* larger section rhythm */
+
+.case-study-page section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+/* ================= METRICS STRIP ================= */
+
+.metrics-strip {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  flex-wrap: nowrap;
+
+  margin-top: -20px;
+
+  padding-bottom: 40px;
+}
+
+/* compact metric blocks */
+
+.metric-card {
+  background: #fffdfb;
+
+  border: 1px solid #f1e7df;
+
+  border-radius: 12px;
+
+  padding: 20px 18px;
+
+  width: 210px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+
+  transition: all 0.2s ease;
+}
+
+/* subtle hover */
+
+.metric-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+/* metric headline */
+
+.metric-card h3 {
+  font-size: 24px;
+
+  margin: 0 0 10px 0;
+
+  color: #2a1f1a;
+
+  letter-spacing: -0.5px;
+
+  line-height: 1.2;
+}
+
+/* supporting text */
+
+.metric-card p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: #6e5a50;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .metrics-strip {
+    flex-wrap: wrap;
+  }
+
+  .metric-card {
+    width: 100%;
+
+    max-width: 280px;
+  }
+}
+/* ================= PROBLEM + TLDR ================= */
+
+.problem-layout {
+  display: flex;
+
+  gap: 60px;
+
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+
+.problem-content {
+  flex: 2;
+}
+
+/* RIGHT SIDE */
+
+.tldr-card {
+  flex: 1;
+
+  background: #fffdfb;
+
+  border: 1px solid #f1e7df;
+
+  border-radius: 14px;
+
+  padding: 28px;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+/* TLDR heading */
+
+.tldr-card h3 {
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+  font-size: 22px;
+
+  color: #2a1f1a;
+}
+
+/* TLDR paragraphs */
+
+.tldr-card p {
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #6e5a50;
+
+  margin-bottom: 18px;
+}
+
+/* TLDR bullet points */
+
+.tldr-card ul {
+  padding-left: 20px;
+
+  margin-top: 20px;
+
+  margin-bottom: 0;
+}
+
+.tldr-card li {
+  margin-bottom: 12px;
+
+  color: #5f534c;
+
+  line-height: 1.7;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .problem-layout {
+    flex-direction: column-reverse;
+
+    gap: 30px;
+  }
+
+  .tldr-card {
+    width: 100%;
+  }
+}
+/* ================= JOURNEY TRANSFORMATION ================= */
+
+.journey-section h2 {
+  margin-bottom: 40px;
+}
+
+/* layout */
+
+.journey-layout {
+  display: flex;
+
+  gap: 30px;
+}
+
+/* cards */
+
+.journey-card {
+  flex: 1;
+
+  background: #fffdfb;
+
+  border: 1px solid #f1e7df;
+
+  border-radius: 16px;
+
+  padding: 32px;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+/* headings */
+
+.journey-card h3 {
+  margin-top: 0;
+
+  margin-bottom: 24px;
+
+  font-size: 24px;
+
+  color: #2a1f1a;
+}
+
+/* lists */
+
+.journey-card ul {
+  margin: 0;
+
+  padding-left: 22px;
+}
+
+.journey-card li {
+  margin-bottom: 18px;
+
+  line-height: 1.8;
+
+  color: #5f534c;
+}
+
+/* BEFORE subtle styling */
+
+.before {
+  background: #fff8f6;
+}
+
+/* AFTER subtle styling */
+
+.after {
+  background: #fdfbf8;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .journey-layout {
+    flex-direction: column;
+  }
+}
+/* ================= SCROLL EXPERIENCE ================= */
+
+/* smooth scrolling globally */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* case study only */
+
+.case-study-page {
+  scroll-snap-type: y proximity;
+}
+
+/* align sections softly while scrolling */
+
+.case-study-page section {
+  scroll-snap-align: start;
+}
+/* ================= CASE STUDY VISUAL RHYTHM ================= */
+
+.case-study-page section:not(.metrics-strip) {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.case-study-page h2 {
+  margin-bottom: 32px;
+
+  line-height: 1.2;
+}
+
+.case-study-page section p {
+  max-width: 700px;
+}
+
+.case-study-page section:nth-of-type(even) {
+  background: #fffdfb;
+}
+
+.case-study-page section {
+  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
