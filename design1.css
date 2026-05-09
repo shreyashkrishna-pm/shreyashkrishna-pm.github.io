@@ -685,3 +685,182 @@ html {
 .case-study-page section {
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
+
+blockquote {
+  margin: 50px 0;
+
+  padding: 28px 32px;
+
+  border-left: 4px solid #d8b7a3;
+
+  background: #fff8f3;
+
+  border-radius: 12px;
+
+  font-size: 24px;
+
+  line-height: 1.6;
+
+  font-weight: 500;
+
+  color: #2a1f1a;
+
+  letter-spacing: -0.3px;
+}
+
+/* ================= OUTCOME METRICS ================= */
+
+.outcome-metrics {
+  display: flex;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+
+  margin-top: 40px;
+
+  margin-bottom: 50px;
+}
+
+/* metric cards */
+
+/* ================= OUTCOME METRICS ================= */
+
+.outcome-metrics {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: nowrap;
+
+  margin-top: 40px;
+
+  margin-bottom: 50px;
+}
+
+/* metric cards */
+
+.outcome-metric {
+  flex: 1;
+
+  min-width: 0;
+
+  background: #fffdfb;
+
+  border: 1px solid #f1e7df;
+
+  border-radius: 12px;
+
+  padding: 20px 18px;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+}
+
+/* metric headline */
+
+.outcome-metric h3 {
+  margin: 0 0 8px 0;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.3px;
+
+  color: #2a1f1a;
+}
+
+/* supporting text */
+
+.outcome-metric p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color: #6e5a50;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+  .outcome-metrics {
+    flex-wrap: wrap;
+  }
+
+  .outcome-metric {
+    width: 100%;
+  }
+}
+/* ================= RATING TABLE ================= */
+
+.rating-table-wrapper {
+  margin-top: 40px;
+
+  margin-bottom: 40px;
+
+  overflow-x: auto;
+}
+
+/* table */
+
+.rating-table {
+  width: 420px;
+
+  border-collapse: collapse;
+
+  background: #fffdfb;
+
+  border: 1px solid #f1e7df;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+/* headings */
+
+.rating-table th {
+  text-align: left;
+
+  padding: 18px 28px;
+
+  background: #f8eee8;
+
+  color: #2a1f1a;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+}
+
+/* cells */
+
+.rating-table td {
+  padding: 22px 28px;
+
+  border-top: 1px solid #f3ebe5;
+
+  color: #5f534c;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+/* wider first column */
+
+.rating-table th:first-child,
+.rating-table td:first-child {
+  width: 55%;
+}
+
+/* subtle hover */
+
+.rating-table tr:hover {
+  background: #fff8f4;
+}
