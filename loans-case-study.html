@@ -38,12 +38,8 @@
       <h1>Doubling the Loans App Rating</h1>
 
       <h2>
-        From 2.2 → 4.4 through iterative app updates and close user interaction
+        From 2.2 → 4.4 in 45 days through iterative app updates and close customer interaction      
       </h2>
-
-      <p>
-        Rebuilding trust in a lending experience through simpler servicing flows, clearer repayments, and reduced dependency on branches.
-      </p>
 
     </div>
 
@@ -108,25 +104,52 @@
     <h2>Problem Statement</h2>
 
     <p>
-      The IIFL Loans app enabled customers to apply for loans, manage repayments, track loan status, and access documents without visiting a branch or calling support. But the experience was not matching the promise.
+      The Loans app helped customers apply for new loans, make timely repayments with real-time loan status, and access financial documents without the need for local branch visits. 
     </p>
 
     <p>
-      Most of our users were in tier 2, tier 3 cities, and villages across India,
-      with Android contributing 86% of usage.
+      Most of our users were in tier 2, tier 3 cities, and villages across India, with Android contributing 86% of usage. Even with meaningful traffic, the app was underperforming: 
     </p>
+<div class="rating-table-wrapper">
 
-    <p>
-      Even with meaningful traffic, the app was underperforming:
-      it had a 3.6 rating on Google Play and 2.2 on the App Store.
-      Customers kept calling out the same issues — unclear loan status,
-      session timeouts on the home screen, outdated referral campaigns,
-      and convenience fees during repayment.
-    </p>
+  <table class="rating-table">
 
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Initial Rating</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>iOS</td>
+        <td>2.2 / 5</td>
+      </tr>
+
+      <tr>
+        <td>Android</td>
+        <td>3.6 / 5</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
     <p>
-      In practice, this meant customers still relied on branches for basic servicing,
-      which increased operational load for the bank.
+      Customer reviews consistently highlighted three core problems:
+      <ul>
+          <li>unclear loan status visibility caused by session timeouts and financial jargon
+
+          </li>
+          <li>
+            outdated referral campaigns and stale content
+          </li>
+          <li>
+            repayment friction due to convenience fees
+          </li>
+      </ul>
+      In practice, this meant customers still relied on branches for basic servicing, which in turn, increased the operational load for the branch officers.
     </p>
 
   </div>
@@ -138,7 +161,7 @@
     <h3>Overview</h3>
 
 <p>
-  Owned product improvements for the IIFL Loans app focused on simplifying repayments,
+  Owned product improvements for the Loans app focused on simplifying repayments,
   improving servicing reliability, and rebuilding customer trust across tier 2 and tier 3 India.
 </p>
 
@@ -164,78 +187,29 @@
 
   <section>
 
-    <h2>Understanding the User Personas — the humans in loop</h2>
+    <h2>Understanding the Core User Experience </h2>
 
     <p>
-  As a Product Manager in the Digital Strategy team,
-  my role was to improve both the functionality and the credibility of the app.
-  Because the app ranked well for IIFL-related searches,
-  it shaped how customers viewed the brand —
-  this was not just a product problem, but a trust problem.
-</p>
-
-<p>
-  I aligned closely with developers to understand the technical constraints,
-  friction points, and what could realistically be improved first.
-</p>
-
-<p>
-  Alongside the customer experience,
-  I also spent time understanding engineering constraints,
-  technical debt, and what roadmap could re-energize the team internally.
-</p>
-
-    <p>
-      I also looked at the customer side closely.
-      The app had around 90K MAU and an average time spent of 2 minutes 10 seconds,
-      which told us people were already coming in with intent.
+        As a Product Manager in the Digital Strategy team, my role was to improve both the functionality and the credibility of the app. The app ranked high for the gold and personal loan related searches, it shaped how customers viewed the brand, making it a trust problem. 
     </p>
-
     <p>
-      For a loan customer,
-      checking repayment status or due dates is not a daily activity —
-      it is a high-stakes moment that needs to be simple and reliable.
+      To understand where friction existed, I worked closely with engineering teams across Android and iOS to evaluate:
+      <ul>
+        <li>instrumentation gaps on iOS and Android</li>
+        <li>session timeout behavior</li>
+        <li>repayment journey drop-offs</li>
+        <li> failure states across critical flows</li>
+      </ul>
     </p>
-
-    <p>
-      Using console metrics and customer sentiment analysis,
-      I mapped the most common journeys and the most painful issues.
+    <p>The app had nearly 90K monthly active users with an average session duration of 2 minutes and 10 seconds. That indicated users were already arriving with strong intent.
+    
     </p>
-
+    <blockquote>
+      “Customers continued relying on branches for even basic servicing needs.”
+    </blockquote>
+    <h4> The Human Element </h4>
     <p>
-      That is where the work became very human for me:
-      answering customer frustration clearly,
-      acknowledging their concerns without defensiveness,
-      and making sure they felt heard while we fixed the product in the next releases.
-    </p>
-
-  </section>
-
-  <!-- SOLUTION -->
-
-  <section>
-
-    <h2>Solution-ing? The core experiences </h2>
-
-    <p>
-      The first priority was to fix the basics.
-      We cleaned up instrumentation so we could trust the funnel data,
-      then improved the home screen experience to make the app easier to understand.
-    </p>
-
-    <p>
-      That included:
-    </p>
-
-    <ul>
-      <li>bolding important loan details on cards</li>
-      <li>showing clearer error states when data did not load</li>
-      <li>adding more actionable guidance during new loan application flows</li>
-    </ul>
-
-    <p>
-      With support from design and content,
-      we rolled out these updates as a bug-fix release.
+      That is where the work became very human for me: responding promptly to customer frustration on the Play Store and App Store, acknowledging concerns without being defensive, and ensuring users felt heard while we addressed issues in subsequent product releases.
     </p>
 
 
@@ -245,47 +219,32 @@
 
   <section>
 
-    <h2>Reducing the Operational Overhead — Repayments and loan documentation</h2>
+    <h2>Stabilizing the User Experience
 
+    </h2>
     <p>
- The repayment flow became the most critical part of the servicing experience.
-  It directly affected credit score, future eligibility,
-  and customer confidence in the product.    </p>
-
-    <p>
-      If this journey is unclear,
-      the app loses trust very quickly.
+      The first priority was to fix the basics. We cleaned up instrumentation of all user journeys on the app. The real-time console data helped us improve the home screen experience, to make the app easier to understand-
+      <ul>
+        <li>bolding important loan details on cards
+        </li>
+        <li>showing clearer error states when data did not load
+        </li>
+      <li>adding more actionable guidance during new loan application flows
+      </li>
+      </ul>   
     </p>
-
+  <H4>Setting the tone</H4>
     <p>
-      We redesigned the repayment experience so customers could immediately see:
+      With design and content, we rolled out iterative bug-fix updates to set the tone for our customers: we were actively improving the experience, not just patching issues.
     </p>
+</section>
 
-    <ul>
-      <li>when the loan was due</li>
-      <li>how much was payable</li>
-      <li>a clear “Pay Now” action</li>
-      <li>a static list of loans with repayment dates</li>
-    </ul>
 
-    <p>
-      We also introduced UPI-based payments and aligned the journey
-      with NPCI’s no-convenience-fee expectation,
-      which reduced friction significantly.
-    </p>
-
-    <p>
-  The release created visible momentum. Once customers saw a simpler servicing flow
-  and received notification nudges,
-  active users, impressions, and login conversions began climbing quickly.
-</p>
-
-  </section>
 <!-- JOURNEY TRANSFORMATION -->
-
 <section class="journey-section">
 
   <h2>Repayment Journey Transformation</h2>
+
 
   <div class="journey-layout">
 
@@ -297,18 +256,18 @@
 
       <ul>
 
-        <li>Customers struggled to identify active loans</li>
+        <li>Unclear visibility into upcoming loan dues</li>
 
-        <li>Repayment visibility was unclear</li>
+        <li>Customers struggled to identify payable amounts</li>
 
-        <li>Session timeouts disrupted servicing flows</li>
+        <li>Multiple active loans created servicing confusion</li>
 
-        <li>Convenience fees increased repayment friction</li>
+        <li>Convenience fees added repayment friction</li>
 
-        <li>Customers continued depending on branches</li>
+        <li>Branch dependency remained high for basic servicing</li>
 
       </ul>
-
+  
     </div>
 
     <!-- AFTER -->
@@ -319,13 +278,13 @@
 
       <ul>
 
-        <li>Clear loan visibility on dashboard</li>
+        <li>Upcoming dues surfaced clearly on the home screen</li>
 
-        <li>Repayment amounts surfaced immediately</li>
+        <li>Payable amounts became immediately visible</li>
 
-        <li>UPI-based repayments simplified payments</li>
+        <li>Loan cards simplified multi-loan repayment visibility</li>
 
-        <li>Notification nudges improved repayment awareness</li>
+        <li>UPI-based payments reduced repayment friction</li>
 
         <li>Customers completed servicing directly within the app</li>
 
@@ -334,62 +293,83 @@
     </div>
 
   </div>
-
+<blockquote>
+    repayments were the most important journey in the customer lifecycle. They affect credit score, future eligibility, and the customer’s confidence in the product.
+  </blockquote>
 </section>
   <!-- OUTCOME -->
 
   <section>
 
-    <h2>Placing our App on the Map</h2>
+    <h2>The Final Act: App Ratings</h2>
 
     <p>
-       As adoption increased, app-store reputation became a key part of the product experience itself.
-
+      Once customers experienced a simpler repayment flow and received timely notification nudges, engagement across the dashboards increased rapidly — active users, impressions, and login conversions all saw strong growth.
     </p>
 
     <p>
-      After a successful repayment,
-      we introduced a rating prompt at the right moment in the journey —
-      not too early,
-      and not randomly.
+      It was now time to focus on strengthening ratings because app-store reputation was part of the brand itself
     </p>
 
     <p>
-      That small change made a big difference.
+  After each successful repayment, we introduced a rating prompt at the right moment in the journey — not too early, and not randomly.
     </p>
-
-    <p>
-      Customers began leaving more action-oriented feedback,
-      and the app’s visibility improved across finance app rankings
-      as ratings rose on both App Store and Google Play.
-    </p>
-
-    <p>
-      Within 45 days of launch,
-      the app reached 4.4 on the App Store and 4.1 on Google Play.
-    </p>
-
-    <p>
-  We also crossed 400+ weekly reviews,
-  helping push the app beyond the 4-star mark on Google Play.
+<p>
+  This small change significantly improved both the quality and volume of customer reviews.
 </p>
 
-    <p>
-      Monthly active users grew from 90K to 166K after the changes,
-      alongside stronger repayment engagement and higher servicing activity within the app.
-    </p>
+<p>
+  Within 45 days of launch:
+</p>
 
-    <p>
-      The app was now better positioned for loan top-ups,
-      cross-sell opportunities,
-      and real-time repayment communication.
-    </p>
+<div class="outcome-metrics">
 
-    <p>
-      More importantly,
-      the team got renewed confidence in the product direction,
-      and the work created visible recognition across functions.
-    </p>
+  <div class="outcome-metric">
+    <h3>⭐ 4.4</h3>
+    <p>iOS App Rating</p>
+  </div>
+
+  <div class="outcome-metric">
+    <h3>📱 4.1</h3>
+    <p>Google Play Rating</p>
+  </div>
+
+  <div class="outcome-metric">
+    <h3>📈 90K → 166K</h3>
+    <p>Monthly Active Users</p>
+  </div>
+
+  <div class="outcome-metric">
+    <h3>💬 400+</h3>
+    <p>Weekly Reviews</p>
+  </div>
+
+</div>
+
+<p>
+  The product was now better positioned for:
+</p>
+
+<ul>
+
+  <li>loan top-ups and cross-sell opportunities</li>
+
+  <li>real-time repayment communication</li>
+
+  <li>reduced branch dependency during servicing</li>
+
+  <li>higher customer trust across servicing journeys</li>
+
+</ul>
+
+<p>
+  Internally, the work also renewed confidence in the product direction across teams.
+</p>
+
+<blockquote>
+  “Improving trust in financial products rarely comes from one large feature launch —
+  it comes from consistently reducing friction in high-stakes customer moments.”
+</blockquote>
 
   </section>
 
