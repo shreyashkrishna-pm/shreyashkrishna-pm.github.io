@@ -1,378 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doubling the Loans App Rating — Shreyash Krishna</title>
+  <meta name="description" content="Case study: how we took a digital lending app from 2.2 → 4.4 in 45 days by redesigning repayments and rebuilding customer trust." />
+  <meta property="og:title" content="Doubling the Loans App Rating — Shreyash Krishna" />
+  <meta property="og:description" content="From 2.2 → 4.4 in 45 days through iterative app updates and close customer interaction." />
 
-  <title>Doubling the Loans App Rating | Shreyash Krishna</title>
-
-  <link rel="stylesheet" href="design1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
 
-<body class="case-study-page">
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <div class="nav-container">
-
-      <div class="logo">
-        <a href="index.html">
-          <img src="profile.jpeg" alt="Shreyash Krishna">
-          <span>Shreyash Krishna</span>
-        </a>
-      </div>
-
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-      </div>
-
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">Shreyash Krishna<span class="dot">.</span></a>
+      <nav class="nav">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="Shreyash_Krishna_CV.pdf" class="resume">Resume ↗</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO -->
+  <main>
 
-  <section class="hero">
-
-    <div class="hero-text">
-
+    <!-- CS HERO -->
+    <section class="cs-hero container">
+      <a href="index.html" class="back">← Back to work</a>
+      <p class="eyebrow">Fintech · Digital Lending · 2023</p>
       <h1>Doubling the Loans App Rating</h1>
+      <p class="lead">From 2.2 → 4.4 in 45 days through iterative app updates and close customer interaction.</p>
+    </section>
 
-      <h2>
-        From 2.2 → 4.4 in 45 days through iterative app updates and close customer interaction      
-      </h2>
-
+    <!-- METRICS STRIP -->
+    <div class="container">
+      <div class="metrics-strip">
+        <div class="metric"><span class="k">App Store</span><span class="v">4.4</span><span class="note">within 45 days</span></div>
+        <div class="metric"><span class="k">Google Play</span><span class="v">4.1</span><span class="note">Android-first markets</span></div>
+        <div class="metric"><span class="k">Monthly Active Users</span><span class="v">90K → 166K</span><span class="note">post repayment redesign</span></div>
+        <div class="metric"><span class="k">Weekly reviews</span><span class="v">400+</span><span class="note">improving app-store visibility</span></div>
+      </div>
     </div>
 
-  </section>
-<!-- METRICS STRIP -->
-
-<section class="metrics-strip">
-
-  <div class="metric-card">
-
-    <h3>4.4</h3>
-
-    <p>
-      App Store Rating <br>
-      within 45 days
-    </p>
-
-  </div>
-
-  <div class="metric-card">
-
-    <h3>4.1</h3>
-
-    <p>
-      Google Play Rating <br>
-      Android-first markets
-    </p>
-
-  </div>
-
-  <div class="metric-card">
-
-    <h3>90K → 166K</h3>
-
-    <p>
-      Monthly Active Users <br>
-      post repayment redesign
-    </p>
-
-  </div>
-
-  <div class="metric-card">
-
-    <h3>400+</h3>
-
-    <p>
-      weekly ratings & reviews <br>
-      improving app visibility
-    </p>
-
-  </div>
-
-</section>
-<!-- PROBLEM + TLDR -->
-
-<section class="problem-layout">
-
-  <!-- MAIN CONTENT -->
-
-  <div class="problem-content">
-
-    <h2>Problem Statement</h2>
-
-    <p>
-      The Loans app helped customers apply for new loans, make timely repayments with real-time loan status, and access financial documents without the need for local branch visits. 
-    </p>
-
-    <p>
-      Most of our users were in tier 2, tier 3 cities, and villages across India, with Android contributing 86% of usage. Even with meaningful traffic, the app was underperforming: 
-    </p>
-<div class="rating-table-wrapper">
-
-  <table class="rating-table">
-
-    <thead>
-      <tr>
-        <th>Platform</th>
-        <th>Initial Rating</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>iOS</td>
-        <td>2.2 / 5</td>
-      </tr>
-
-      <tr>
-        <td>Android</td>
-        <td>3.6 / 5</td>
-      </tr>
-    </tbody>
-
-  </table>
-
-</div>
-    <p>
-      Customer reviews consistently highlighted three core problems:
-      <ul>
-          <li>unclear loan status visibility caused by session timeouts and financial jargon
-
-          </li>
-          <li>
-            outdated referral campaigns and stale content
-          </li>
-          <li>
-            repayment friction due to convenience fees
-          </li>
-      </ul>
-      In practice, this meant customers still relied on branches for basic servicing, which in turn, increased the operational load for the branch officers.
-    </p>
-
-  </div>
-
-  <!-- TLDR -->
-
-  <aside class="tldr-card">
-
-    <h3>Overview</h3>
-
-<p>
-  Owned product improvements for the Loans app focused on simplifying repayments,
-  improving servicing reliability, and rebuilding customer trust across tier 2 and tier 3 India.
-</p>
-
-<ul>
-
-  <li>App ratings improved from 2.2 → 4.4 (App Store) and 3.6 → 4.1 (Google Play)</li>
-
-  <li>Monthly active users grew from 90K → 166K</li>
-
-  <li>Generated 400+ weekly reviews and ratings</li>
-
-  <li>Reduced customer dependence on branches for servicing</li>
-
-  <li>Improved repayment adoption through UPI-led flows</li>
-
-</ul>
-
-  </aside>
-
-</section>
-
-  <!-- USER UNDERSTANDING -->
-
-  <section>
-
-    <h2>Understanding the Core User Experience </h2>
-
-    <p>
-        As a Product Manager in the Digital Strategy team, my role was to improve both the functionality and the credibility of the app. The app ranked high for the gold and personal loan related searches, it shaped how customers viewed the brand, making it a trust problem. 
-    </p>
-    <p>
-      To understand where friction existed, I worked closely with engineering teams across Android and iOS to evaluate:
-      <ul>
-        <li>instrumentation gaps on iOS and Android</li>
-        <li>session timeout behavior</li>
-        <li>repayment journey drop-offs</li>
-        <li> failure states across critical flows</li>
-      </ul>
-    </p>
-    <p>The app had nearly 90K monthly active users with an average session duration of 2 minutes and 10 seconds. That indicated users were already arriving with strong intent.
-    
-    </p>
-    <blockquote>
-      “Customers continued relying on branches for even basic servicing needs.”
-    </blockquote>
-    <h4> The Human Element </h4>
-    <p>
-      That is where the work became very human for me: responding promptly to customer frustration on the Play Store and App Store, acknowledging concerns without being defensive, and ensuring users felt heard while we addressed issues in subsequent product releases.
-    </p>
-
-
-  </section>
-
-  <!-- REPAYMENTS -->
-
-  <section>
-
-    <h2>Stabilizing the User Experience
-
-    </h2>
-    <p>
-      The first priority was to fix the basics. We cleaned up instrumentation of all user journeys on the app. The real-time console data helped us improve the home screen experience, to make the app easier to understand-
-      <ul>
-        <li>bolding important loan details on cards
-        </li>
-        <li>showing clearer error states when data did not load
-        </li>
-      <li>adding more actionable guidance during new loan application flows
-      </li>
-      </ul>   
-    </p>
-  <H4>Setting the tone</H4>
-    <p>
-      With design and content, we rolled out iterative bug-fix updates to set the tone for our customers: we were actively improving the experience, not just patching issues.
-    </p>
-</section>
-
-
-<!-- JOURNEY TRANSFORMATION -->
-<section class="journey-section">
-
-  <h2>Repayment Journey Transformation</h2>
-
-
-  <div class="journey-layout">
-
-    <!-- BEFORE -->
-
-    <div class="journey-card before">
-
-      <h3>Before</h3>
-
-      <ul>
-
-        <li>Unclear visibility into upcoming loan dues</li>
-
-        <li>Customers struggled to identify payable amounts</li>
-
-        <li>Multiple active loans created servicing confusion</li>
-
-        <li>Convenience fees added repayment friction</li>
-
-        <li>Branch dependency remained high for basic servicing</li>
-
-      </ul>
-  
+    <!-- PROBLEM + TLDR -->
+    <section class="cs-section wide">
+      <div class="container">
+        <div class="cs-problem">
+          <div>
+            <p class="step">01 · Problem</p>
+            <h2>The app users trusted with money had stopped feeling trustworthy</h2>
+            <p>The Loans app helped customers apply for new loans, make timely repayments with real-time loan status, and access financial documents without local branch visits.</p>
+            <p>Most users were in tier 2, tier 3 cities, and villages across India, with Android contributing 86% of usage. Even with meaningful traffic, the app was underperforming — 2.2 / 5 on iOS, 3.6 / 5 on Android — and reviews highlighted three core problems:</p>
+            <ul>
+              <li>unclear loan status caused by session timeouts and financial jargon</li>
+              <li>outdated referral campaigns and stale content</li>
+              <li>repayment friction from convenience fees</li>
+            </ul>
+            <p>In practice, customers still relied on branches for basic servicing — which in turn increased operational load for branch officers.</p>
+          </div>
+
+          <aside class="cs-tldr">
+            <p class="k">TL;DR</p>
+            <p style="font-size: 14px; color: var(--ink); margin: 0 0 20px; line-height: 1.6;">
+              Owned product improvements for the Loans app focused on simplifying repayments,
+              improving servicing reliability, and rebuilding customer trust across tier 2 / 3 India.
+            </p>
+            <ul>
+              <li>Ratings 2.2 → 4.4 (iOS), 3.6 → 4.1 (Android)</li>
+              <li>MAU grew 90K → 166K</li>
+              <li>400+ weekly reviews</li>
+              <li>Reduced branch dependence for servicing</li>
+              <li>UPI-led repayment adoption</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCOVERY -->
+    <section class="cs-section">
+      <div class="container">
+        <p class="step">02 · Discovery</p>
+        <h2>Understanding the core experience</h2>
+        <p>As a Product Manager in the Digital Strategy team, my role was to improve both the functionality and the credibility of the app. Because the app ranked high for gold and personal loan searches, it shaped how customers viewed the brand — making this a trust problem.</p>
+        <p>To find where friction lived, I worked closely with engineering across Android and iOS to evaluate:</p>
+        <ul>
+          <li>instrumentation gaps on iOS and Android</li>
+          <li>session timeout behavior</li>
+          <li>repayment journey drop-offs</li>
+          <li>failure states across critical flows</li>
+        </ul>
+        <p>The app had ~90K MAU with an average session of 2m 10s. That told us users arrived with strong intent.</p>
+
+        <blockquote class="pull">
+          <p>Customers continued relying on branches for even basic servicing needs.</p>
+        </blockquote>
+
+        <h3>The human element</h3>
+        <p>That's where the work became deeply human: responding promptly to customer frustration on the Play Store and App Store, acknowledging concerns without being defensive, and ensuring users felt heard while we addressed issues in subsequent releases.</p>
+      </div>
+    </section>
+
+    <!-- STABILIZE -->
+    <section class="cs-section cs-stable">
+      <div class="container">
+        <p class="step">03 · Stabilize</p>
+        <h2>Fixing the basics first</h2>
+        <p>We cleaned up instrumentation of all user journeys on the app. Real-time console data helped us improve the home screen to make the app easier to understand:</p>
+        <ul>
+          <li>bolding important loan details on cards</li>
+          <li>showing clearer error states when data did not load</li>
+          <li>adding actionable guidance during new loan application flows</li>
+        </ul>
+        <h3>Setting the tone</h3>
+        <p>With design and content, we rolled out iterative bug-fix updates to signal to customers that we were actively improving the experience, not just patching issues.</p>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="cs-section wide">
+      <div class="container">
+        <p class="step">04 · Transform</p>
+        <h2>Repayment journey transformation</h2>
+        <div class="cs-compare">
+          <div class="col">
+            <p class="label">Before</p>
+            <ul>
+              <li>Unclear visibility into upcoming loan dues</li>
+              <li>Customers struggled to identify payable amounts</li>
+              <li>Multiple active loans created servicing confusion</li>
+              <li>Convenience fees added repayment friction</li>
+              <li>Branch dependency remained high for basic servicing</li>
+            </ul>
+          </div>
+          <div class="col after">
+            <p class="label">After</p>
+            <ul>
+              <li>Upcoming dues surfaced clearly on the home screen</li>
+              <li>Payable amounts became immediately visible</li>
+              <li>Loan cards simplified multi-loan repayment visibility</li>
+              <li>UPI-based payments reduced repayment friction</li>
+              <li>Customers completed servicing directly within the app</li>
+            </ul>
+          </div>
+        </div>
+        <blockquote class="pull" style="max-width: 760px; margin: 64px auto 0;">
+          <p>Repayments were the most important journey in the customer lifecycle. They affect credit score, future eligibility, and the customer's confidence in the product.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- OUTCOME -->
+    <section class="cs-section">
+      <div class="container">
+        <p class="step">05 · Outcome</p>
+        <h2>The final act: app ratings</h2>
+        <p>Once customers experienced a simpler repayment flow and received timely notification nudges, engagement across dashboards grew rapidly — active users, impressions, and login conversions all saw strong growth.</p>
+        <p>It was now time to strengthen ratings, because app-store reputation was part of the brand itself. After each successful repayment we introduced a rating prompt at the right moment — not too early, not randomly. That small change significantly improved both the quality and volume of customer reviews.</p>
+        <p>Within 45 days of launch:</p>
+
+        <div class="cs-outcome-metrics">
+          <div class="metric"><span class="k">App Store</span><span class="v">4.4</span></div>
+          <div class="metric"><span class="k">Google Play</span><span class="v">4.1</span></div>
+          <div class="metric"><span class="k">MAU</span><span class="v">90K → 166K</span></div>
+          <div class="metric"><span class="k">Weekly reviews</span><span class="v">400+</span></div>
+        </div>
+
+        <p>The product was now better positioned for:</p>
+        <ul>
+          <li>loan top-ups and cross-sell opportunities</li>
+          <li>real-time repayment communication</li>
+          <li>reduced branch dependency during servicing</li>
+          <li>higher customer trust across servicing journeys</li>
+        </ul>
+        <p>Internally, the work also renewed confidence in the product direction across teams.</p>
+
+        <blockquote class="pull">
+          <p>Improving trust in financial products rarely comes from one large feature launch — it comes from consistently reducing friction in high-stakes customer moments.</p>
+        </blockquote>
+
+        <div class="cs-actions">
+          <a href="index.html" class="btn btn-secondary">← Back to work</a>
+          <a href="mailto:shreyash.krishna@hotmail.com" class="btn btn-primary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 Shreyash Krishna</span>
+      <span>Product · Fintech · SaaS</span>
     </div>
-
-    <!-- AFTER -->
-
-    <div class="journey-card after">
-
-      <h3>After</h3>
-
-      <ul>
-
-        <li>Upcoming dues surfaced clearly on the home screen</li>
-
-        <li>Payable amounts became immediately visible</li>
-
-        <li>Loan cards simplified multi-loan repayment visibility</li>
-
-        <li>UPI-based payments reduced repayment friction</li>
-
-        <li>Customers completed servicing directly within the app</li>
-
-      </ul>
-
-    </div>
-
-  </div>
-<blockquote>
-    repayments were the most important journey in the customer lifecycle. They affect credit score, future eligibility, and the customer’s confidence in the product.
-  </blockquote>
-</section>
-  <!-- OUTCOME -->
-
-  <section>
-
-    <h2>The Final Act: App Ratings</h2>
-
-    <p>
-      Once customers experienced a simpler repayment flow and received timely notification nudges, engagement across the dashboards increased rapidly — active users, impressions, and login conversions all saw strong growth.
-    </p>
-
-    <p>
-      It was now time to focus on strengthening ratings because app-store reputation was part of the brand itself
-    </p>
-
-    <p>
-  After each successful repayment, we introduced a rating prompt at the right moment in the journey — not too early, and not randomly.
-    </p>
-<p>
-  This small change significantly improved both the quality and volume of customer reviews.
-</p>
-
-<p>
-  Within 45 days of launch:
-</p>
-
-<div class="outcome-metrics">
-
-  <div class="outcome-metric">
-    <h3>⭐ 4.4</h3>
-    <p>iOS App Rating</p>
-  </div>
-
-  <div class="outcome-metric">
-    <h3>📱 4.1</h3>
-    <p>Google Play Rating</p>
-  </div>
-
-  <div class="outcome-metric">
-    <h3>📈 90K → 166K</h3>
-    <p>Monthly Active Users</p>
-  </div>
-
-  <div class="outcome-metric">
-    <h3>💬 400+</h3>
-    <p>Weekly Reviews</p>
-  </div>
-
-</div>
-
-<p>
-  The product was now better positioned for:
-</p>
-
-<ul>
-
-  <li>loan top-ups and cross-sell opportunities</li>
-
-  <li>real-time repayment communication</li>
-
-  <li>reduced branch dependency during servicing</li>
-
-  <li>higher customer trust across servicing journeys</li>
-
-</ul>
-
-<p>
-  Internally, the work also renewed confidence in the product direction across teams.
-</p>
-
-<blockquote>
-  “Improving trust in financial products rarely comes from one large feature launch —
-  it comes from consistently reducing friction in high-stakes customer moments.”
-</blockquote>
-
-  </section>
+  </footer>
 
 </body>
-
 </html>
